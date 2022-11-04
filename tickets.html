@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Compra de Tickets</title>
+</head>
+<body>
+     <header>
+        <div class="cabecera">
+            <div class="izq">
+                <div class="logo"><img src="img/codoacodo.png" width="130px"></div>
+                <div class="txLogo">Conf BsAs</div>
+            </div> 
+            <div class="der">
+                <nav>
+                    <a href="#" id="marcador">La conferencia</a>
+                    <a href="oradores.html">Los oradores</a>
+                    <a href="lugar-fecha.html">El lugar y la fecha</a>
+                    <a href="orador.html">Conviertete en orador</a>
+                    <a href="compra.html" class="resaltador">Comprar Tickets</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <section class="tarjetas">
+                <div class="tarjeta card border-primary mb-3" > 
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">Estudiantes</h5>  
+                        <p class="card-text">Tenemos un descuento</p>
+                        <h5 class="card-title">50%</h5>
+                        <p class="card-text">* presentar documentación.</p>
+                    </div>
+                </div>
+                <div class="tarjeta card border-info mb-3" >
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">Trainer</h5>  
+                        <p class="card-text">Tenemos un descuento</p>
+                        <h5 class="card-title">25%</h5>
+                        <p class="card-text">* presentar documentación.</p>
+                    </div>
+                </div>
+            
+            
+                <div class="tarjeta card border-warning mb-3">
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">Junior</h5>  
+                        <p class="card-text">Tenemos un descuento</p>
+                        <h5 class="card-title">15%</h5>
+                        <p class="card-text">* presentar documentación.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section class="inscripcion">
+                <p>Venta</p>
+                <h2>VALOR DE TICKETS $200</h2>
+                    
+            <div class="cajaTickets">
+                <form name="formularioTickets" action="">
+                    <div class="row inputTickets">
+                        <div class="col-sm">
+                            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="nombre" required>
+                        </div>
+                        <div class="col-sm bloque">
+                            <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" id="apellido" required>
+                        </div>
+                    </div>
+
+                <div class="row mb inputTickets">
+                    <div class="col-sm">
+                        <input type="email" class="form-control" placeholder="Correo"  id="correo" required>
+                        <!--<input type="email" class="form-control" id="colFormLabel" placeholder="Correo"  id="correo" required>-->
+                    </div>
+                </div>
+
+                <div class="row g inputTickets">
+                    <div class="col-md">  
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number" class="form-control" placeholder="Cantidad" id="cantidad" required>
+                        <!--<input type="number" class="form-control" id="floatingInputGrid" placeholder="Cantidad" id="
+                        cantidadTickets" required>-->
+                    </div>
+                    <div class="col-md">
+                        <label for="categoriaSelect">Categoría</label>
+                        <select class="form-select" id="categoriaSelect" placeholder="Seleccione categoría">
+                        <!--<select class="form-select" id="floatingSelectGrid" name="categoria" placeholder="Seleccione categoría">-->
+                          <option selected value="0">Sin Categoría</option>
+                          <option value="1">Estudiante</option>
+                          <option value="2">Trainer</option>
+                          <option value="3">Junior</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="tabla">Total a pagar: $ <span><div id="totalPago"></div></span></div>
+
+<button type="reset" class="btn btn-primary btn-lg btnTickets" id="btnBorrar">Borrar</button>
+<button type="button" class="btn btn-primary btn-lg btnTickets" id="btnResumen">Resumen</button>
+
+           <!--     <button type="reset" id="btnBorrar" class="d-grid gap-2 d-md-block btnTickets">Borrar</button>
+                <button type="button" id="btnResumen" class="d-grid gap-2 d-md-block btnTickets">Resumen</button>-->
+              <!--<button type="reset" id="btnBorrar" class="btn btn-primary btn col-6">Borrar</button>
+              <button type="button" id="btnResumen" class="btn btn-primary btn">Resumen</button>-->
+            </form>
+         </div>   
+        </section>    
+    </div>
+    <footer>
+        <nav class="menu">
+        <a href="">Preguntas frecuentes</a>
+        <a href="">Contáctanos</a>
+        <a href="">Prensa</a>
+        <a href="">Conferencia</a>
+        <a href="">Términos y condiciones</a>
+        <a href="">Privacidad</a>
+        <a href="">Estudiantes</a>
+        </nav>
+    </footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/acciones.js"></script>
+</body>
+</html>
