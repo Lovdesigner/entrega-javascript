@@ -71,13 +71,20 @@ let totalValorTickets = (cantidad.value) * valorTicket;
 
 if (categoria.value == 0) {
 	totalValorTickets = totalValorTickets;
-}  if (categoria.value == 1) {
+}
+
+if (categoria.value == 1) {
 	totalValorTickets = totalValorTickets - (descuentoEstudiante / 100 * totalValorTickets);
-}  if (categoria.value == 2) {
+}
+
+if (categoria.value == 2) {
 	totalValorTickets = totalValorTickets - (descuentoTrainer / 100 * totalValorTickets);
-}  if (categoria.value == 3) {
+}
+
+if (categoria.value == 3) {
 	totalValorTickets = totalValorTickets - (descuentoJunior / 100 * totalValorTickets);
 }
+
 /* -------------------Acá está el switch que no me funciona con los descuentos, siempre pone el valor de $200
 switch (categoria.value)
 {
@@ -96,7 +103,7 @@ case 3:
 	break;
 }*/
 
-totalPagar.innerHTML = totalValorTickets;
+totalPago.innerHTML = totalValorTickets;
 
 }
 
