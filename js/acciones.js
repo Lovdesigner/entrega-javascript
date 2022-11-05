@@ -7,7 +7,7 @@ let descuentoJunior = 15;
 let nombre = document.getElementById("nombre");
 let apellido = document.getElementById("apellido");
 let mail = document.getElementById("mail");
-let cantidadTickets = document.getElementById("cantidadTickets");
+let cantidad = document.getElementById("cantidad");
 let categoria = document.getElementById("categoriaSelect");
 
 function quitarClaseError() {
@@ -19,7 +19,7 @@ function quitarClaseError() {
 
 
 
-function total_a_pagar() {
+function totalPagar() {
 	quitarClaseError();
 
 //Validación formulario
@@ -79,39 +79,34 @@ if (categoria.value == 0) {
 if (categoria.value == 3) {
 	totalValorTickets = totalValorTickets - (descuentoJunior / 100 * totalValorTickets);
 }
-
-/*switch (categoria.value)
+/* -------------------Acá está el switch que no me funciona con los descuentos, siempre pone el valor de $200
+switch (categoria.value)
 {
-
-case '1':
+case 0:
 	totalValorTickets = totalValorTickets;
 	break;
-
-case '2':
-	totalValorTickets = totalValorTickets-(descuentoEstudiante / 100 * totalValorTickets);
+case 1:
+	totalValorTickets = totalValorTickets - (descuentoEstudiante / 100 * totalValorTickets);
+	break;
+case 2:
+	totalValorTickets = totalValorTickets - (descuentoTrainer / 100 * totalValorTickets);
 	break;
 
-case '3':
-	totalValorTickets = totalValorTickets-(descuentoTrainer / 100 * totalValorTickets);
-	break;
-
-case '4':
-	totalValorTickets = totalValorTickets--(descuentoJunior / 100 * totalValorTickets);
+case 3:
+	totalValorTickets = totalValorTickets - (descuentoJunior / 100 * totalValorTickets);
 	break;
 }*/
 
-totalPago.innerHTML = totalValorTickets;
+totalPagar.innerHTML = totalValorTickets;
 
 }
-
-
 
 // Botones
-btnResumen.addEventListener('click', total_a_pagar);
+resumen.addEventListener('click', totalPagar);
 
-function reset_total_a_pagar() {
+function resetTotalPagar() {
 	quitarClaseError();
-	totalPago.innerHTML = "";
+	totalPagar.innerHTML = "";
 }
 
-btnBorrar.addEventListener('click', reset_total_a_pagar);
+borrar.addEventListener('click', resetTotalPagar);
