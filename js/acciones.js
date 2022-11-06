@@ -11,9 +11,9 @@ let cantidad = document.getElementById("cantidad");
 let categoria = document.getElementById("categoriaSelect");
 
 function quitarClaseError() {
-	let x = document.querySelectorAll(".form-control, .form-select");
-	for (let i = 0; i < x.length; i++) {
-		x[i].classList.remove('is-invalid');
+	let inputFormulario = document.querySelectorAll(".form-control, .form-select");
+	for (let i = 0; i < inputFormulario.length; i++) {
+		inputFormulario[i].classList.remove('is-invalid');
 	}
 }
 
